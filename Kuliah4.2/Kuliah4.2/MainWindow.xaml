@@ -1,0 +1,29 @@
+﻿<Window x:Class="Kuliah4._2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Names" Height="180" Width="260">
+    <Grid Margin="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Margin="0,0,0,42" Style="{StaticResource LabelStyle}">Names</Label>
+        <ListBox x:Name="lstNames" Margin="0,29,0,0" Grid.RowSpan="2" Style="{StaticResource ListBoxStyle}" />
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="5,0,0,0">
+            <TextBox x:Name="txtName" Height="39" Text="" Style="{StaticResource TextBoxStyle}" />
+            <Button x:Name="btnAdd" Margin="0,5,0,0" Click="btnAdd_Click" Content="Add Name" Style="{StaticResource ButtonStyle}"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
